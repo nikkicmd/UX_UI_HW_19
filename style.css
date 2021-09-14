@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+header h4 {
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* splash screen */
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* NavBar */
+
+.navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 15px;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.nicoledouglas {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* Banner */
+section {
+    padding: 100px;
+}
+
+.banner {
+    background-color:#F2F3F5;
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    padding: 100px 0;
+    font-size: 25PX;
+    font-family: poppins;
+    min-height: 100vh;
+    background: url(https://images.unsplash.com/photo-1539960467689-01d885747185?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textBx {
+    text-align: left;
+    padding-left: 100px;
+} 
+
+.banner h2 {
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.banner h2 span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner h3 {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn {
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+/* About Me */
+
+.heading {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.heading h2 {
+    font-weight: 600;
+    font-size: 35px;
+    text-decoration: underline;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentBx {
+    padding-right: 30px;
+}
+
+.contentBx h3 {
+    font-size: 24px;
+    margin-bottom: 10px ;
+}
+
+.w50 {
+    min-width: 50%;
+    padding-right: 50px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* My Skills */
+
+.skills {
+    background: #111;
+}
+
+.heading.white {
+    color: #fff;
+}
+
+.skills .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.info-architecture {
+    text-align: center;
+}
+
+.skills .content .skillBx {
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.skills .content .skillBx:hover {
+    background: #2196f3;
+}
+
+.skills .content .skillBx img {
+    max-width: 80px;
+    filter: invert(1);
+}
+
+.skills .content .skillBx h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* My Work */
+.container {  
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.split {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.split > * {
+    flex-basis: 30%;
+    min-width: 240px;
+}
+
+.work {
+    padding-top: 60px;
+}
+
+.featured-details {
+    max-width: 100%;
+    padding-top: 2px;
+    opacity: 0;
+    margin-right: 8%;
+    -webkit-transition: opacity 250ms linear;
+    transition: opacity 250ms linear;
+    z-index: 2;
+    text-align: center;
+}
+
+.my-work {
+    position: relative;
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 2;
+    transition: opacity 250ms ease-in-out;
+}
+
+.my-work:hover .featured-details, .my-work:focus .my-work {
+    opacity: 1;
+    text-shadow: 0 0 2em white;
+}
+
+.my-work:hover, .my-work:focus {
+    opacity: .8;
+}
+                        
+.featured-details span {
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+/* contact */
+.contact {
+    background: #111;
+    font-family: open sans;
+}
+
+.formBx {
+    min-width: 60%;
+}
+
+.formBx form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.formBx form input,
+.formBx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #fff;
+    resize: none;
+}
+
+.formBx form textarea {
+    min-height: 200px;
+}
+
+.formBx form input::placeholder
+.formBx form textarea::placeholder {
+    color: #999;
+}
+
+.formBx form input [type="submit"]{
+    max-width: 100px;
+    background: #2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contactInfo {
+    min-width: 40%;
+}
+
+.contactInfoBx {
+    position: relative;
+}
+
+.contactInfoBx .box {
+    position:relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactInfoBx .box .icon {
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+
+.contactInfoBx .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactInfoBx .box .text h3 {
+    font-weight: 500;
+    color: #2196f3;
+    margin-bottom: 0;
+}
