@@ -59,8 +59,10 @@ header h4 {
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
+ 
 
 /* NavBar */
+
 
 .navbar {
     background-color: white;
@@ -68,6 +70,12 @@ header h4 {
     top: 0;
     width: 100%;
     font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1% 0;
 }
 
 .navbar li {
@@ -196,12 +204,15 @@ img {
 .skills .content {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     flex-direction: row;
 }
 
 .info-architecture {
     text-align: center;
+}
+
+.skillBx {
+    width: 20%;
 }
 
 .skills .content .skillBx {
@@ -248,7 +259,7 @@ img {
 }
 
 .work {
-    padding-top: 60px;
+    padding: 0px;
 }
 
 .featured-details {
@@ -276,6 +287,11 @@ img {
     line-height: 1.2;
     z-index: 2;
     transition: opacity 250ms ease-in-out;
+    width: 40%;
+}
+
+#my-work-anchor {
+    padding-top: 100px;
 }
 
 .my-work:hover .featured-details, .my-work:focus .my-work {
